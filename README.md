@@ -8,7 +8,7 @@ This is a common setup in AWS:
     
 - **RDS** is kept private in the VPC, reducing attack surface.
     
-- AWS only charges for Elastic IPs, not regular public IPs on EC2.
+- AWS only charges for Elastic IPs, not regular (AWS's dynamically allocated) public IPs on EC2.
 
 > Having a publicly accessible database is a critical vulnerability. Attackers can brute-force their way in. Using a VPN restricts access to you (and selected peers), while keeping traffic secure via SSH, WireGuard, and other encrypted protocols.
 
