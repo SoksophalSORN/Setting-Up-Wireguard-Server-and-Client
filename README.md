@@ -115,9 +115,10 @@ Address = 10.10.0.10/24
 [Peer]
 PublicKey = <server_publickey>
 Endpoint = <EC2_public_IP>:51820
-AllowedIPs = 10.10.0.0/24
-# PersistentKeepAlive = 25
+AllowedIPs = 10.10.0.0/24, 172.16.0.0/24
+PersistentKeepAlive = 25
 ```
+>If you configured without PersistentKeepAlive, and the server cannot ping the client despite that the client can ping the server, consider configure it with the PersistentKeepAlive attribute.
 
 Start the client the same way:
 
